@@ -1,127 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Haris -CodeReview 2</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
 </head>
 <body>
-	<header>
-		
-		<div id="headerImg">
-			<img id="logo" src="img/logo.png" alt="logo">
-			<img id="banner" src="img/banner.png" alt="bann">
-		</div>
-		<div id="navigation">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<!-- I dont want to open in new window so I will not use -target="_blank"-  -->
-				<li><a href="team/team.html" >Team</a></li> 
-			</ul>
-		</div>
-	</header>
 
-	<main>
-		
-		<div id="background">
-			<div id="car"><h1>Car Insurance</h1></div>
-			<div id="themain">
-				<div id="text">
-					<h1>Great Coverage begins <br>
-					with a custom quote</h1>
-				</div>
-				<div id="form">
-					<div class="field">
-					<p>Your Name</p>
-					<input id="name" type="text" name="name">
-				</div>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-top">
+                <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                <a href="https://www.codefactory.wien"><img src="./img/banner.png" alt="banner"></a>
+            </div>
+            <ul class="list">
+                <li class="list-item"><a href="./index.html">Home</a></li>
+                <li class="list-item"><a href="./team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
-				<div class="field">
-					<p>Age</p>
-					<input id="age" type="text" name="age">
-				</div>
+    <!-- CALCULATOR SECTION -->
+    <section class="calc-container">
+        <div class="hero">
+            <h1>Car Insurance</h1>
+            
+        </div>
+        <div class="calc-box">
+                <h2>Great coverage begins <br> with a custom quote</h2>
 
-				<div class="field">
-					<p>Country</p>
-					<select id="Country">
-						<option value="Austria"> Austria</option>
-						<option value="Hungary"> Hungary</option>
-						<option value="Greece"> Greece</option>
-					</select>
-				</div>
+                <form action="send">
+                    <div class="field">
+                            <label for="name">Your name:</label>
+                            <input type="text" name="name" id="name">
+                    </div>
 
-				<div class="field">
-					<p>Horse Power of your car</p>
-					<input id="horse" type="text" name="power">
-				</div>
-				<div class="field" id="cal">
-					<input id="btn" type="submit" value="Calculate">
-					</div>
-				</div>
+                    <div class="field">
+                            <label for="age">Age:</label>
+                            <input type="number" name="age" id="age">
+                    </div>
 
+                    <div class="field">
+                            <label for="country">Country:</label>
+                            <select name="country" id="country">
+                                <option value="austria">Austria</option>
+                                <option value="hungary">Hungary</option>
+                                <option value="greece">Greece</option>
+                            </select>
+                    </div>
 
-				<div id="result">
-				</div>
-			</div>
-			<div id="textunder">
-			<p id="first">Un-complicating car coverage </p>
-			<p>Understandig your coverage options shouldn't be so hard</p>
-			<p>We'll guide you through available coverage types,</p>
-			<p>starting with who and what is covered</p>
-		</div>
+                    <div class="field">
+                            <label for="hp">Horsepower of your car:</label>
+                            <input type="text" name="hp" id="hp">
+                    </div>
+                    <button id="calcBtn" value="Calculate">Calculate</button>
+                    <p id="priceOutput">Printed calculation goes here</p>
+                </form>
+        </div>
 
-		</div>
+        <!-- MESSAGE -->
+        <div class="hero-message">
+            <h3>Un-complicating car coverage</h3>
+            <p>Understanding your coverage options shouldn't be so hard. We'll guide you through avaliable coverage types, starting with who and what is covered</p>
+        </div>
+    </section>
 
-		<div id="both">
-			
-			<div class="first">
-				<div class="big">What comes standard</div>
-				<p class="under">The coverage you need</p>
-				<div class="list">
-				<p> <span style="color: #00fafa">&#10003</span> Bodily Injury Liability</p>
-				<p><span style="color: #00fafa">&#10003</span> Property Damage</p>
-				<p><span style="color: #00fafa">&#10003</span> Medical Payments</p>
-				</div>
-				<div class="down">
-				<p><b>Benefits</b></p>
-				<p class="last">12-month rate guarantee | 24/7 customer<br>
-				service | Lifetime Repair Guarantee</p>
-				</div>
-			</div>
-			<div class="second">
-				<div class="big">Add-on protection & coverage</div>
-				<p class="under">For more peace of mind</p>
-				<div class="list">
-				<p><span style="color: #00fafa">&#10003</span> Better car Replacment</p>
-				<p><span style="color: #00fafa">&#10003</span> Towing & Labor</p>
-				<p><span style="color: #00fafa">&#10003</span> Rental Car Coverage</p>
-				</div>
-				<div class="down">
-				<p><b>Earned Benefits</b></p>
-				<p class="last">Accident Forgivness' | New Car <br>
-				Replacment</p>
-				</div>
-			</div>
-		</div>
-	</main>
-<footer>
-	
-	<ul>
-		<li><a href="">Home</a></li>
-		<li><a href="team/index.html" target="_blank">Team</a></li>
-	</ul>
-	<div>
-		<img src="img/logo-inv.png" style="margin-right: 25px">
-	</div>
-	<p>Haris Kravarevic - CodeFactory 2019</p>
+    <!-- OPTIONS SECTION -->
+    <section class="options">
 
+        <div class="card">
+            <h3>What comes standard</h3>
+            <p>The coverage you need</p>
 
-</footer>
+            <ul>
+                <li>Bodily Injury Liability</li>
+                <li>Property Damage</li>
+                <li>Medical Payments</li>
+            </ul>
 
+            <h4>Benefits</h4>
+            <small>12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee</small>
+        </div>
 
+        <div class="card">
+            <h3>What comes standard</h3>
+            <p>The coverage you need</p>
 
+            <ul>
+                <li>Bodily Injury Liability</li>
+                <li>Property Damage</li>
+                <li>Medical Payments</li>
+            </ul>
 
-<script type="text/javascript" src="main.js"></script>
+            <h4>Benefits</h4>
+            <small>12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee</small>
+        </div>
 
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <ul class="list">
+            <li class="list-item"><a href="./index.html">Home</a></li>
+            <li class="list-item"><a href="./team.html">Team</a></li>
+        </ul>
+
+        <img src="./img/logo-inv.png" alt="logo-inverted">
+        <p>Haris Kravarevic - Codefactory 2019 &copy;</p>
+    </footer>
+
+    
+<script src="./assets/main.js"></script>
 </body>
 </html>
