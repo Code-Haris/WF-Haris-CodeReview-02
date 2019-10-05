@@ -1,0 +1,339 @@
+$primary-font: PT Sans Narrow, sans-serif, Arial, sans-serif
+$primary-color: #3A3A3A //since this is the only color that is used more often than twice throughout the whole layout, it seemed unnecessary to create another variable for another color, but here we go:
+$calculation-color: #449236
+
+body
+	margin: 0
+	width: 100%
+	font-family: $primary-font
+	
+
+	header
+		width: 100%
+		background: #FBF2F2
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		align-items: center
+
+		#headerleft
+			width: 20%
+			padding: 2%
+
+		#headerright
+			width: 60%
+			padding: 2%
+
+	nav
+		width: 100%
+		background: #8E1918
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0.5%
+
+			li
+				display: inline
+				padding-left: 2%
+
+				a
+					text-decoration: none
+					color: white
+					font-size: 2.5vw
+
+				a:hover
+					color: lightgrey
+
+	main
+		width: 100%
+		overflow: hidden
+
+		#section1
+			width: 100%
+			position: relative
+
+			#hero
+				width: 100%
+				position: relative
+				background: lightgrey /*needed to fill a light gap at the bottom that I couldn't get rid of*/
+
+				img
+					width: 100%
+				h1
+					position: absolute
+					top: 0
+					color: white
+					padding: 2%
+					margin-top: 2%
+					font-size: 5vw
+					font-weight: normal
+
+			#belowhero
+				width: 100%
+				text-align: center
+				font-weight: bold
+				background: lightgrey
+				padding-top: 2%
+				color: $primary-color
+
+				h2
+					font-size: 4vw
+					margin-bottom: 0
+
+				p
+					font-size: 2.7vw
+					padding-bottom: 2%
+					margin-top: 0
+
+
+			#calcbox
+				width: 88%
+				height: 63%
+				border: 2px solid grey
+				border-radius: 3px
+				position: absolute
+				top: 15%
+				left: 6%
+				background: rgba(255, 255, 255, 0.8) /*using rgba instead of opacity because opacity-property always extends its value to the children which I didn't want*/
+				display: flex
+				flex-flow: column nowrap
+
+				h1
+					width: 100%
+					text-align: center
+					font-size: 5.5vw
+					font-weight: normal
+					color: $primary-color
+					margin: 0
+					padding-top: 2%
+
+				#inputbox
+					width: 100%
+					display: flex
+					flex-flow: row wrap
+					justify-content: space-around
+					align-content: flex-start /*and all of a sudden, it's working*/
+
+					.inputs
+						width: 30%
+						padding: 1% 2% 1% 2%
+
+						p
+							margin: 0
+							font-size: 2vw
+							font-weight: bold
+							color: $primary-color
+
+						input
+							font-size: 3vw
+							font-family: $primary-font
+							width: 100%
+							box-sizing: border-box /*needed this property to make sure the input fields are the exact same size as the dropdown-field*/
+							padding: 0
+
+						input:hover
+							background: lightyellow //whenever I change the color to something other than white, it additionally creates a 3D-effect. I don't know why that happens but I'm keeping it because it looks nice
+
+						#country
+							font-size: 3vw
+							font-family: $primary-font
+							width: 100%
+
+					#button
+						width: 25%
+						margin: 2% 5% 0% 5% /*using the margins to keep the button below the input fields; there are other ways to do it but this was the quickest*/
+						border: 0
+						background: $calculation-color
+						border-radius: 10px
+						color: white
+						font-family: $primary-font
+						font-size: 4vw
+
+					#button:hover
+						background: darkgreen
+
+				#quote
+					text-align: center
+					font-size: 4vw
+					font-weight: normal
+					margin-top: 6%
+					color: $calculation-color
+					text-shadow: 2px 2px 2px white
+
+		#section2
+			margin: 10% 5% 10% 5%
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+
+
+			.options
+				font-family: Roboto, sans-serif
+				border: 1px solid lightgrey
+				border-radius: 2px
+				width: 40%
+				padding: 3%
+				box-shadow: 0px 2px 2px lightgrey, 0px -2px $primary-color
+
+
+				h4
+					color: #3F74A0
+					font-size: 2.5vw
+					font-weight: 200
+					margin: 0
+
+				p
+					margin: 0
+					font-size: 1.7vw
+					color: $primary-color
+
+				#grey
+					color: grey
+					padding-bottom: 5%
+
+					sup
+						font-size: 0.9vw
+
+				.check
+					margin: 5% 0% 5% 0%
+
+				.check::first-letter
+					color: #8FD2D4
+					font-weight: bold
+					padding-right: 3%
+
+				h5
+					margin: 0
+					padding-top: 6%
+					font-size: 1.7vw
+
+	footer
+		width: 100%
+		background: black
+
+		nav
+			background: black
+
+			ul li a
+				font-size: 2vw
+
+		#logofooter
+			float: right
+			width: 20%
+			padding: 4%
+
+		p
+			color: white
+			margin: 0
+			text-align: center
+			clear: both
+			padding: 1%
+			font-size: 1.8vw
+
+@media screen and (max-width: 480px)
+	body
+		width: 100%
+		margin: 0
+
+		header
+			#headerright
+				display: none
+
+			#headerleft
+				width: 40%
+
+		nav ul
+			text-align: center
+
+			li a
+				font-size: 5vw
+
+		main
+
+			#section1 
+				
+				#hero
+					width: 100%
+					margin-bottom: 0%
+					background: lightgrey
+
+					h1
+						font-size: 8vw
+
+					img
+						width: 200%
+						
+
+				#belowhero
+
+					h2
+						font-size: 6vw
+
+					p
+						font-size: 4vw
+
+				#calcbox
+					width: 100%
+					height: 68%
+					left: 0
+					border: 0
+					border-radius: 0
+
+					h1
+						font-size: 7vw
+
+					#inputbox
+						display: flex
+						flex-flow: column nowrap
+
+						.inputs
+							width: 90%
+							align-self: center
+
+							p
+								font-size: 5vw
+
+							input
+								font-size: 5vw
+
+							#country
+								font-size: 5vw
+
+						#button
+							font-size: 6vw
+							width: 40%
+							align-self: center
+
+					#quote
+						font-size: 7vw
+						margin-top: 2%
+
+			#section2
+				flex-direction: column
+				align-items: center
+
+				.options
+					width: 90%
+					margin-bottom: 10%
+					
+					h4
+						font-size: 5vw
+
+					p
+						font-size: 3vw
+
+					#grey sup
+						font-size: 1.5vw
+
+					h5
+						font-size: 3vw
+
+		footer nav ul li a
+			font-size: 3vw
+
+		footer #logofooter
+			width: 40%
+
+		footer p
+			font-size: 2.5vw
